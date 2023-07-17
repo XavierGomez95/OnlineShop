@@ -40,7 +40,7 @@ public class OnlineShop {
                 orders = new ArrayList<>();
             }
 
-            List<Product> productList = shoppingCard.getProducts();
+            List<Product> productList = new ArrayList<>(shoppingCard.getProducts());
             if (orders.isEmpty())
                 orders.add(new Order(productList, "user", 1));
             else
